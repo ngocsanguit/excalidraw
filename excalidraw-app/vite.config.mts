@@ -147,6 +147,8 @@ export default defineConfig(({ mode }) => {
             "service-worker.js",
             "**/*.chunk-*.js",
           ],
+          // Increase max file size to cache to 3MB (default is 2MB)
+          maximumFileSizeToCacheInBytes: 3 * 1024 * 1024,
           runtimeCaching: [
             {
               urlPattern: new RegExp(".+.woff2"),
